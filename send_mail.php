@@ -1,12 +1,10 @@
 <?php
 if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+
     $email_to = "jonmartz@hotmail.com";
     $email_subject = "From your personal site";
  
     function died($error) {
-        // your error code can go here
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br /><br />";
         echo $error."<br /><br />";
@@ -14,15 +12,11 @@ if(isset($_POST['email'])) {
         die();
     }
  
- 
-    // validation expected data exists
+    // validation 
     if(!isset($_POST['email']) ||
         !isset($_POST['message'])) {
         died('Please enter both your email and your message.');       
     }
- 
-     
- 
 
     $email_from = $_POST['email']; // required
     $comments = $_POST['message']; // required

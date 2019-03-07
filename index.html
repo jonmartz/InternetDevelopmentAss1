@@ -2,23 +2,29 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type='text/javascript' src='jquery.particleground.js'></script>
+    <script type='text/javascript' src='demo.js'></script>
 </head>
 <body>
+
+
+    <div id="particles">
+    </div>
+
     <p>
-        <div id="menu">
-            <li><img src="https://lh3.googleusercontent.com/a-/AAuE7mCO_zoDEK4o6cOJRjF4toMkUt3Otru6e3azronMHQ=s192" width="45" height="45" /></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#photos">My Photos</a></li>
-            <li><a href="#playlist">My Playlist</a></li>
-            <li><a href="#like">Like</a></li>
-            <li><a href="#qrcoder">QR code</a></li>
-            <li><a href="#spa">Q&A</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+        <div class="menu">
+            <div class="menuItem"><img src="https://lh3.googleusercontent.com/a-/AAuE7mCO_zoDEK4o6cOJRjF4toMkUt3Otru6e3azronMHQ=s192" width="45" height="45" /></div>
+            <div class="menuItem"><a href="#about">About Me</a></div>
+            <div class="menuItem"><a href="#photos">My Photos</a></div>
+            <div class="menuItem"><a href="#playlist">My Playlist</a></div>
+            <div class="menuItem"><a href="#like">Like</a></div>
+            <div class="menuItem"><a href="#qrcoder">QR code</a></div>
+            <div class="menuItem"><a href="#spa">Q&A</a></div>
+            <div class="menuItem"><a href="#contact">Contact Me</a></div>
         </div>
     </p>
 
-
-    <section id="about" class="section">
+    <section id="about" class="section" align="center">
         <br />
         <br />
         <br />
@@ -27,16 +33,18 @@
         </div>
         <br />
         <p>
-            Im Jonathan Martinez. I was born in Israel, but we moved to Mexico when I was 6 years old,<br />
-            lived 14 years in Mexico, and then moved back to Israel 8 years ago.<br />
-            I'm a ISE student at Ben Gurion University. I really like everything in the<br />
-            degree that is related to AI, because I find AI really fascinating and exciting.<br />
-            <br />
-            I except to learn a lot of useful things in this Internet Programming course,<br />
-            and be able to create amazing stuff in the internet and share it with people.<br />
-            <br />
-            In my free time I like to play guitar, write music, watch movies and<br />
-            videos, read about science, and travel.<br />
+            <b>
+                Im Jonathan Martinez. I was born in Israel, but we moved to Mexico when I was 6 years old,<br />
+                lived 14 years in Mexico, and then moved back to Israel 8 years ago.<br />
+                I'm a ISE student at Ben Gurion University. I really like everything in the<br />
+                degree that is related to AI, because I find AI really fascinating and exciting.<br />
+                <br />
+                I except to learn a lot of useful things in this Internet Programming course,<br />
+                and be able to create amazing stuff in the internet and share it with people.<br />
+                <br />
+                In my free time I like to play guitar, write music, watch movies and<br />
+                videos, read about science, and travel.<br />
+            </b>
         </p>
         <br />
     </section>
@@ -147,7 +155,7 @@
 
     </section>
 
-    <section id="playlist" class="section">
+    <section id="playlist" class="section" align="center">
 
         <br />
         <br />
@@ -169,7 +177,7 @@
         <br />
     </section>
 
-    <section id="like" class="section">
+    <section id="like" class="section" align="center">
         <br />
         <br />
         <br />
@@ -182,7 +190,7 @@
 
     </section>
 
-    <section id="qrcoder" class="section">
+    <section id="qrcoder" class="section" align="center">
         <br />
         <br />
         <br />
@@ -195,7 +203,6 @@
              width="300" height="300">
 
         <br />
-        <br />
     </section>
 
     <section id="spa" class="section">
@@ -207,18 +214,91 @@
         </div>
         <br />
 
+        <ul>
+            <li>
+                <b>What are some differences between web1, web2 and web3?</b><br><br>
+                <ol type="1">
+                    <li>
+                        During <b>web1</b> all websites were static, which means that only the<br>
+                        webmaster could modify the website. In <b>web2</b> and <b>web3</b>, the websites became<br>
+                        dynamic, which means that also the Internet surfers could start contributing to<br>
+                        the websites (which could now support Online Social Networks).<br><br>
+                    </li>
+                    <li>
+                        <b>web3</b> supports a Semantic Web, which makes use of semantic languages<br>
+                        in order to return better results to search queries. For example, the query "What side effects<br>
+                        others have for Acamol drug?" would get pretty good results thanks to the Semantic Web, while<br>
+                        in <b>web1</b> you would get worse results becuase it <b>web1</b> doesn't support a Semantic Web.<br>
+                        <b>web2</b> Does support semantic search to a certain extent, but the web it supports is not<br>
+                        considered "Semantic".<br><br>
+                    </li>
+                    <li>
+                        <b>web3</b> Will make extensive use of AI algorithms (machine learning, NLP, etc), unlike <b>web1</b><br>
+                        and <b>web2</b>), in order to discover new trends on the web, improve semantic search, etc.<br><br><br>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <b>Can you explain these differences with a "Use Case" example?</b><br><br>
+                I'll describe the use case of a user in Tel Aviv that wants to search for a good place to eat in the evening: <br><br>
+                <ul style="list-style-type:circle;">
+                    <li>
+                        <b>On web1:</b><br>
+                        <ol type="1">
+                            <li>The user gets to the search site.</li>
+                            <li>Types in "Good restaurants in Tel Aviv".</li>
+                            <li>Clicks the first link that appears (Tel-Aviv.com), not being sure it's the best site for this.</li>
+                            <li>
+                                In the homepage of the site there is no info about restaurants, but there is a link in the menu.<br>
+                                The user clicks this link ("Restaurants")
+                            </li>
+                            <li>
+                                The user has to manually scroll through the page, comparing the restaurant's address with<br>
+                                His own address and decide by himself if the restaurant is good enough (there's no information<br>
+                                about the restaurant's score, because the site is static and user's cannot give scores) and close enough.
+                            </li>
+                            <li>
+                                The user finds a restaurant that suits his needs. The only information he gets from the site is<br>
+                                The restaurant's phone number and the menu, so he has to call to ask if there's enough tables at that time.
+                            </li>
+                        </ol>
+                        <br>
+                    </li>
+                    <li>
+                        <b>On web3:</b><br>
+                        <ol type="1">
+                            <li>The user gets to the search site.</li>
+                            <li>Types in "Good restaurant near me".</li>
+                            <li>
+                                The search results are the best restaurants that are close to the user. The user clicks the first result <br>
+                                because that restaurant is very near, it has a great score and also serves his favorite food.
+                            </li>
+                            <li>
+                                The user is presented with the option to reserve a table, which he chooses. After clicking, the table<br>
+                                is automatically reserved without the user having to call and manually reserve it.
+                            </li>
+                        </ol>
+                        <br>
+                    </li>
+                </ul>
+                As you can see, in <b>web3</b> made use of AI and semantics to understand the meaning of the query, and thanks to the websites<br>
+                being dynamic could sort the search results according to the score given by many other users.
+            </li>
+        </ul>
+        <br>
+
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section" align="center">
         <br />
         <br />
         <br />
         <div class="grad">
-            contact me
+            Contact me
         </div>
         <br />
 
-        <form action="send_mail.php" method="post">
+        <form action="mailto:jonmartz@hotmail.com" method="post" enctype="text/plain">
 
             <label for="email">Email Address</label>
             <br>
@@ -234,6 +314,13 @@
 
         <br />
         <br />
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </section>
 
 
@@ -250,5 +337,6 @@
             $('#menu').toggle($(this).scrollTop() > 1000)
         });
     </script>
+
 </body>
 </html>
